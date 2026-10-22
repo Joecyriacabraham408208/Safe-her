@@ -1,0 +1,145 @@
+/* Core Theme Colors - Switched to Deep Blue & Cyan */
+:root {
+    --bg-dark: #040914;           /* Very dark midnight blue */
+    --accent-glow: #00d2ff;       /* Bright electric cyan for high readability */
+    --accent-dark: #0077b6;       /* Deeper blue for hover states */
+    --glass-bg: rgba(12, 24, 48, 0.85); /* Deep blue glass */
+    --glass-border: rgba(255, 255, 255, 0.15);
+}
+
+/* Landing Page Background */
+.landing-bg {
+    background: radial-gradient(circle at top center, #101e38 0%, var(--bg-dark) 100%);
+    min-height: 100vh;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Dashboard Map Body */
+.dashboard-body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevents scrolling on the map page */
+}
+
+/* Navbar */
+.custom-nav {
+    border-bottom: 1px solid var(--glass-border);
+    background: rgba(4, 9, 20, 0.5);
+    backdrop-filter: blur(10px);
+}
+.nav-links a {
+    color: rgba(255, 255, 255, 0.75);
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.nav-links a.active, .nav-links a:hover {
+    color: var(--accent-glow);
+}
+
+/* Landing Page Typography */
+.hero-section {
+    min-height: 80vh;
+}
+.hero-title {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
+}
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 650px;
+}
+
+/* Updated Blue Badge */
+.badge-pill {
+    background: rgba(0, 210, 255, 0.1);
+    color: var(--accent-glow);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    width: fit-content;
+    border: 1px solid rgba(0, 210, 255, 0.4);
+}
+
+/* Glowing Buttons - High Contrast */
+.btn-glow {
+    background: var(--accent-glow);
+    color: #040914; /* Dark text on bright cyan for max readability */
+    border: none;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-weight: 700;
+    box-shadow: 0 0 15px rgba(0, 210, 255, 0.4);
+    transition: all 0.3s ease;
+}
+.btn-glow:hover {
+    background: var(--accent-dark);
+    color: #ffffff;
+    box-shadow: 0 0 25px rgba(0, 119, 182, 0.7);
+}
+.btn-outline-glow {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid var(--glass-border);
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.btn-outline-glow:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.text-accent {
+    color: var(--accent-glow) !important;
+}
+
+/* Dark Glassmorphism */
+.glass-dark {
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Fullscreen Map Configuration */
+.fullscreen-map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+.fullscreen-map iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Floating Controls (Top Left Over Map) */
+.floating-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 320px;
+    z-index: 1000; 
+    padding: 24px;
+}
+
+/* Custom Slider */
+.custom-slider::-webkit-slider-thumb {
+    background: var(--accent-glow);
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 12px var(--accent-glow);
+}
