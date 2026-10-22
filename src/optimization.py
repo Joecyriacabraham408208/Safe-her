@@ -9,7 +9,8 @@ def optimize_allocation(df, total_officers_budget):
     min_reqs = dict(zip(districts, df['Min_Req']))
     max_caps = dict(zip(districts, df['Max_Cap']))
 
-    x = pulp.LpVariable.dicts("Officers", districts, lowBound=0, cat='Integer')
+    # FIXED: Replaced .dicts() with a bulletproof Python dictionary comprehension
+    x = {i: pulp.LpVariable(f"Officers_{i}", lowBound=0, cat='Integer') for i in districts}
 
     model += pulp.lpSum([risk_scores[i] * x[i] for i in districts]), "Total_Risk_Mitigated"
     model += pulp.lpSum([x[i] for i in districts]) <= total_officers_budget, "Budget_Constraint"
