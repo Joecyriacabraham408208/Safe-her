@@ -1,4 +1,4 @@
-# OptiGuard: AI-Powered Police Resource Allocation
+# SAFER: AI-Powered Police Resource Allocation
 
 OptiGuard is a dynamic Operations Research web dashboard designed to optimize police deployments across city districts. By leveraging Integer Linear Programming (ILP), the system mathematically maximizes risk mitigation while adhering to strict personnel budgets and baseline coverage constraints.
 
